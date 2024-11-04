@@ -28,7 +28,7 @@ general_config = {
   'base_columns': ['CLOSE']},
 
 
-  'fe_FREQ': {'timeframe': [5],
+  'fe_WIN_FREQ': {'timeframe': [5],
   'window_size': [5*2, 10*2, 48*2, 288*2, 480*2 ,
                   5*4, 10*4, 48*4, 288*4, 480*4 ,
                   5*6, 10*6, 48*6, 288*6, 480*6 ,

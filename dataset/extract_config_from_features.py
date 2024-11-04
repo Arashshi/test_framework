@@ -93,6 +93,9 @@ def get_fe_type(f: str):
             "fe_SMA",
             "fe_cndl_shift",
             "fe_WIN",
+
+            "fe_WIN_FREQ",
+
             "fe_cndl_ptrn",
             "fe_market_close",
             "RANDOM",
@@ -184,6 +187,9 @@ def extract_config_from_selected_feature_init(df_fe: pd.DataFrame, logger=defaul
             # ? indicators
             elif fe_type in [
                 "fe_WIN",
+
+                "fe_WIN_FREQ",
+
                 "fe_RSI",
                 "fe_ATR",
                 "fe_RSTD",

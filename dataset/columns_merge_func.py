@@ -3,11 +3,12 @@ include_target = False
 import gc
 import pandas as pd
 from dataset.logging_tools import default_logger
-import polars as pl
 from collections import defaultdict
+
 from dataset.extract_config_from_features import (
     get_all_selected_features,
 )
+
 from dataset.configs.history_data_crawlers_config import root_path
 from pathlib import Path
 from dataset.utils.reduce_memory import reduce_mem_usage
@@ -22,6 +23,9 @@ prefixes = [
     "fe_WIN_max",
     "fe_WIN_min",
     "fe_WIN",
+    
+    "fe_WIN_FREQ",
+
     "fe_ratio_RSI",
     "fe_ratio_EMA",
     "fe_ratio_RSTD",
@@ -120,7 +124,7 @@ def history_columns_merge(feature_config, logger=default_logger,general_mode=Fal
     logger.info("--> start history_columns_merge fumc:")
 
     if not general_mode:
-        feature_map_path = "data/models/jamesv01/tradeset_usdjpy_feature_map.json"
+        feature_map_path = "data/models/jamesv01/tradeset_usdjpy_feature_map.json" #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
         f_cols = set(get_all_selected_features(feature_map_path)["feature_names"])
 
     fe_refrece_list = [
@@ -133,6 +137,9 @@ def history_columns_merge(feature_config, logger=default_logger,general_mode=Fal
         "fe_ratio",
         "fe_cndl_shift",
         "fe_WIN",
+
+        "fe_WIN_FREQ",
+        
         "fe_cndl_ptrn",
         "fe_market_close",
     ]

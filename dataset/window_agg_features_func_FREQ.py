@@ -202,7 +202,7 @@ def add_win_fe_base_func_FREQ(
 def history_fe_WIN_features_FREQ(feature_config, logger=default_logger):
 
     logger.info("- " * 25)
-    logger.info("--> start history_fe_WIN_features func:")
+    logger.info("--> start history_fe_WIN_FREQ sfeatures func:")
     try:
 
         fe_prefix = "fe_WIN_FREQ"
