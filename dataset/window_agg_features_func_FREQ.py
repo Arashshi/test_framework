@@ -8,10 +8,7 @@ from dataset.configs.history_data_crawlers_config import root_path, symbols_dict
 import pandas as pd
 import numpy as np
 from scipy.stats import skew, kurtosis
-from numpy import rms
 from scipy.signal import cwt, ricker
-
-
 
 def cal_window_max(array, window_size):
     res = np.zeros([array.shape[0], 4])
